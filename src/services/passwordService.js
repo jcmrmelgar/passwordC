@@ -19,10 +19,10 @@ exports.generatePasswords = (options) => {
     // Set default options
     const config = {
       length: options.length || 8,
-      uppercase: options.uppercase \!== undefined ? options.uppercase : true,
-      lowercase: options.lowercase \!== undefined ? options.lowercase : true,
-      numbers: options.numbers \!== undefined ? options.numbers : true,
-      special: options.special \!== undefined ? options.special : true,
+      uppercase: options.uppercase !== undefined ? options.uppercase : true,
+      lowercase: options.lowercase !== undefined ? options.lowercase : true,
+      numbers: options.numbers !== undefined ? options.numbers : true,
+      special: options.special !== undefined ? options.special : true,
       count: options.count || 1
     };
 
@@ -35,7 +35,7 @@ exports.generatePasswords = (options) => {
       throw new Error('Must generate at least 1 password');
     }
     
-    if (\!config.uppercase && \!config.lowercase && \!config.numbers && \!config.special) {
+    if (!config.uppercase && !config.lowercase && !config.numbers && !config.special) {
       throw new Error('At least one character type must be selected');
     }
 
@@ -63,7 +63,7 @@ function generateSinglePassword(config) {
     uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
     lowercase: 'abcdefghijklmnopqrstuvwxyz',
     numbers: '0123456789',
-    special: '\!@#$%^&*()_+-=[]{}|;:,.<>?'
+    special: '!@#$%^&*()_+-=[]{}|;:,.<>?'
   };
   
   // Create pool of allowed characters
