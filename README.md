@@ -1,6 +1,6 @@
-# Secure Password Generator
+# Secure Password Generator 
 
-A Node.js application that generates secure and customizable passwords.
+Created by Cesar Melgar / Node.js application that generates secure and customizable passwords.
 
 ## Features
 
